@@ -1,37 +1,12 @@
-"      _               _                 _  __
-"     | |__   __ _  __| | __      _____ | |/ _|
-"     | '_ \ / _` |/ _` | \ \ /\ / / _ \| | |_
-"     | |_) | (_| | (_| |  \ V  V / (_) | |  _|
-"     |_.__/ \__,_|\__,_|   \_/\_/ \___/|_|_|
+" A Vim colorscheme focused on handyness, usability, readability, etc,
+" configured for elive
 "
-"      I am the Bad Wolf. I create myself.
-"       I take the words. I scatter them in time and space.
-"        A message to lead myself here.
-"
-" A Vim colorscheme pieced together by Steve Losh.
-" Available at http://stevelosh.com/projects/badwolf/
-"
-" Why? {{{
-"
-" After using Molokai for quite a long time, I started longing for
-" a replacement.
-"
-" I love Molokai's high contrast and gooey, saturated tones, but it can be
-" a little inconsistent at times.
-"
-" Also it's winter here in Rochester, so I wanted a color scheme that's a bit
-" warmer.  A little less blue and a bit more red.
-"
-" And so Bad Wolf was born.  I'm no designer, but designers have been scattering
-" beautiful colors through time and space long before I came along.  I took
-" advantage of that and reused some of my favorites to lead me to this scheme.
-"
-" }}}
+" HEX codes conversion in: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 
 " Supporting code -------------------------------------------------------------
 " Preamble {{{
 
-if !has("gui_running") && &t_Co != 88 && &t_Co != 256
+if !has("gui_running") && &t_Co != 256
     finish
 endif
 
@@ -41,7 +16,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "badwolf"
+let colors_name = "elive"
 
 if !exists("g:badwolf_html_link_underline") " {{{
     let g:badwolf_html_link_underline = 1
@@ -72,6 +47,7 @@ let s:bwc.mediumgravel   = ['666462', 241]
 let s:bwc.deepgravel     = ['45413b', 238]
 let s:bwc.deepergravel   = ['35322d', 236]
 let s:bwc.darkgravel     = ['242321', 235]
+let s:bwc.darkergravel   = ['1c1c1c', 234]
 let s:bwc.blackgravel    = ['1c1b1a', 233]
 let s:bwc.blackestgravel = ['141413', 232]
 
@@ -83,19 +59,25 @@ let s:bwc.dalespale = ['fade3e', 221]
 let s:bwc.dirtyblonde = ['f4cf86', 222]
 
 " Delicious, chewy red from Made of Code for the poppiest highlights.
-let s:bwc.taffy = ['ff2c4b', 196]
+let s:bwc.taffy = ['d75f00', 208]
+let s:bwc.red = ['d70000', 160]
+let s:bwc.removed = ['af0000', 124]
+let s:bwc.added = ['00ff00', 46]
 
 " Another chewy accent, but use sparingly!
 let s:bwc.saltwatertaffy = ['8cffba', 121]
 
 " The star of the show comes straight from Made of Code.
-let s:bwc.tardis = ['0a9dff', 39]
+let s:bwc.tardis = ['949494', 246]
 
 " This one's from Mustang, not Florida!
 let s:bwc.orange = ['ffa724', 214]
 
 " A limier green from Getafe.
-let s:bwc.lime = ['aeee00', 154]
+let s:bwc.lime = ['af5fff', 177]
+let s:bwc.green = ['5fd700', 76]
+let s:bwc.green2 = ['87af00', 106]
+
 
 " Rose's dress in The Idiot's Lantern.
 let s:bwc.dress = ['ff9eb8', 211]
@@ -106,6 +88,23 @@ let s:bwc.toffee = ['b88853', 137]
 " Also based on that Clouds Midnight brown.
 let s:bwc.coffee    = ['c7915b', 173]
 let s:bwc.darkroast = ['88633f', 95]
+
+
+" Variables
+let s:bwc.variable1  = ['5fafff', 39]
+let s:bwc.variable2  = ['87d7ff', 117]
+let s:bwc.variable3  = ['00d7ff', 45]
+
+" Misc
+let s:bwc.yellow  = ['ffff00', 226]
+let s:bwc.yellow2  = ['ffaf00', 214]
+let s:bwc.yellow3  = ['ffff87', 228]
+let s:bwc.strings  = ['5fd700', 82]
+let s:bwc.strings2  = ['8787ff', 117]
+let s:bwc.delimiter  = ['ffafaf', 217]
+let s:bwc.flow1  = ['ff8700', 208]
+let s:bwc.magenta  = ['8700d7', 165]
+
 
 " }}}
 " Highlighting Function {{{
@@ -177,41 +176,72 @@ endif
 
 " General/UI {{{
 
-call s:HL('Normal', 'plain', 'blackgravel')
+" user defined background
+" TODO : all the grayscale values can be affected by this parameter, make a
+" 'shift' system of grayscale tones depending of our selected bg
+if exists('g:badwolf_background')
+    if g:badwolf_background == 0
+        call s:HL('Normal', 'plain', '')
+        let bg_c = ''
+    elseif  g:badwolf_background == 1
+        call s:HL('Normal', 'plain', 'coal')
+        let bg_c = 'coal'
+    elseif  g:badwolf_background == 2
+        call s:HL('Normal', 'plain', 'blackestgravel')
+        let bg_c = 'blackestgravel'
+    elseif  g:badwolf_background == 3
+        call s:HL('Normal', 'plain', 'blackgravel')
+        let bg_c = 'blackgravel'
+    elseif  g:badwolf_background == 4
+        call s:HL('Normal', 'plain', 'darkergravel')
+        let bg_c = 'darkergravel'
+    elseif  g:badwolf_background == 5
+        call s:HL('Normal', 'plain', 'darkgravel')
+        let bg_c = 'darkgravel'
+    else
+        call s:HL('Normal', 'plain', 'deepergravel')
+        let bg_c = 'deepergravel'
+    endif
+else
+    call s:HL('Normal', 'plain', 'darkergravel')
+    let bg_c = 'darkergravel'
+endif
 
-call s:HL('Folded', 'mediumgravel', 'bg', 'none')
+"call s:HL('Normal', 'plain', 'coal')
 
-call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
+call s:HL('Folded', 'magenta', bg_c, 'none')
+
+call s:HL('VertSplit', 'lightgravel', '', 'none')
 
 call s:HL('CursorLine',   '', 'darkgravel', 'none')
 call s:HL('CursorColumn', '', 'darkgravel')
 call s:HL('ColorColumn',  '', 'darkgravel')
 
-call s:HL('TabLine', 'plain', s:tabline, 'none')
-call s:HL('TabLineFill', 'plain', s:tabline, 'none')
-call s:HL('TabLineSel', 'coal', 'tardis', 'none')
+call s:HL('TabLine', 'plain', bg_c, 'none')
+call s:HL('TabLineFill', 'plain', bg_c, 'none')
+call s:HL('TabLineSel', bg_c, 'tardis', 'none')
 
 call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 
-call s:HL('NonText',    'deepgravel', 'bg')
-call s:HL('SpecialKey', 'deepgravel', 'bg')
+call s:HL('NonText',    'deepgravel', '')
+call s:HL('SpecialKey', 'deepgravel', '')
 
 call s:HL('Visual',    '',  'deepgravel')
 call s:HL('VisualNOS', '',  'deepgravel')
 
-call s:HL('Search',    'coal', 'dalespale', 'bold')
-call s:HL('IncSearch', 'coal', 'tardis',    'bold')
+call s:HL('Search',    'coal', 'yellow2', 'bold')
+call s:HL('IncSearch', 'coal', 'yellow3',    'bold')
 
 call s:HL('Underlined', 'fg', '', 'underline')
 
 call s:HL('StatusLine',   'coal', 'tardis',     'bold')
-call s:HL('StatusLineNC', 'snow', 'deepgravel', 'bold')
+call s:HL('StatusLineNC', 'snow', 'deepergravel', 'bold')
 
 call s:HL('Directory', 'dirtyblonde', '', 'bold')
 
 call s:HL('Title', 'lime')
 
-call s:HL('ErrorMsg',   'taffy',       'bg', 'bold')
+call s:HL('ErrorMsg',   'snow',       '', 'bold')
 call s:HL('MoreMsg',    'dalespale',   '',   'bold')
 call s:HL('ModeMsg',    'dirtyblonde', '',   'bold')
 call s:HL('Question',   'dirtyblonde', '',   'bold')
@@ -226,9 +256,9 @@ call s:HL('Tag', '', '', 'bold')
 " }}}
 " Gutter {{{
 
-call s:HL('LineNr',     'mediumgravel', s:gutter)
-call s:HL('SignColumn', '',             s:gutter)
-call s:HL('FoldColumn', 'mediumgravel', s:gutter)
+call s:HL('LineNr',     'deepgravel', bg_c)
+call s:HL('SignColumn', 'magenta', bg_c)
+call s:HL('FoldColumn', 'mediumgravel', bg_c)
 
 " }}}
 " Cursor {{{
@@ -241,27 +271,27 @@ call s:HL('iCursor', 'coal', 'tardis', 'none')
 " Syntax highlighting {{{
 
 " Start with a simple base.
-call s:HL('Special', 'plain')
+call s:HL('Special', 'delimiter')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
-call s:HL('Comment',        'gravel')
-call s:HL('Todo',           'snow', 'bg', 'bold')
-call s:HL('SpecialComment', 'snow', 'bg', 'bold')
+call s:HL('Comment',        'lightgravel')
+call s:HL('Todo',           'coal', 'magenta', 'bold')
+call s:HL('SpecialComment', 'snow', '', 'bold')
 
 " Strings are a nice, pale straw color.  Nothing too fancy.
-call s:HL('String', 'dirtyblonde')
+call s:HL('String', 'strings')
 
 " Control flow stuff is taffy.
 call s:HL('Statement',   'taffy', '', 'bold')
 call s:HL('Keyword',     'taffy', '', 'bold')
-call s:HL('Conditional', 'taffy', '', 'bold')
-call s:HL('Operator',    'taffy', '', 'none')
+call s:HL('Conditional', 'flow1', '', 'bold')
+call s:HL('Operator',    'lime', '', 'none')
 call s:HL('Label',       'taffy', '', 'none')
 call s:HL('Repeat',      'taffy', '', 'none')
 
 " Functions and variable declarations are orange, because plain looks weird.
-call s:HL('Identifier', 'orange', '', 'none')
-call s:HL('Function',   'orange', '', 'none')
+call s:HL('Identifier', 'variable1', '', 'none')
+call s:HL('Function',   'yellow', '', 'none')
 
 " Preprocessor stuff is lime, to make it pop.
 "
@@ -269,10 +299,10 @@ call s:HL('Function',   'orange', '', 'none')
 " grouped together at the beginning of a file.  If they're in the middle of some
 " other code they should stand out, because something tricky is
 " probably going on.
-call s:HL('PreProc',   'lime', '', 'none')
-call s:HL('Macro',     'lime', '', 'none')
-call s:HL('Define',    'lime', '', 'none')
-call s:HL('PreCondit', 'lime', '', 'bold')
+call s:HL('PreProc',   'variable2', '', 'none')
+call s:HL('Macro',     'variable2', '', 'none')
+call s:HL('Define',    'variable2', '', 'none')
+call s:HL('PreCondit', 'variable2', '', 'bold')
 
 " Constants of all kinds are colored together.
 " I'm not really happy with the color yet...
@@ -280,8 +310,8 @@ call s:HL('Constant',  'toffee', '', 'bold')
 call s:HL('Character', 'toffee', '', 'bold')
 call s:HL('Boolean',   'toffee', '', 'bold')
 
-call s:HL('Number', 'toffee', '', 'bold')
-call s:HL('Float',  'toffee', '', 'bold')
+call s:HL('Number', 'strings2', '', 'bold')
+call s:HL('Float',  'strings2', '', 'bold')
 
 " Not sure what 'special character in a constant' means, but let's make it pop.
 call s:HL('SpecialChar', 'dress', '', 'bold')
@@ -295,7 +325,8 @@ call s:HL('Typedef', 'taffy', '', 'bold')
 call s:HL('Exception', 'lime', '', 'bold')
 
 " Misc
-call s:HL('Error',  'snow',   'taffy', 'bold')
+call s:HL('Error',  'red',   'blackgravel', 'bold')
+call s:HL('localWhitespaceError',  '',   'darkergravel', 'bold')
 call s:HL('Debug',  'snow',   '',      'bold')
 call s:HL('Ignore', 'gravel', '',      '')
 
@@ -303,24 +334,16 @@ call s:HL('Ignore', 'gravel', '',      '')
 " Completion Menu {{{
 
 call s:HL('Pmenu', 'plain', 'deepergravel')
-call s:HL('PmenuSel', 'coal', 'tardis', 'bold')
+call s:HL('PmenuSel', bg_c, 'tardis', 'bold')
 call s:HL('PmenuSbar', '', 'deepergravel')
 call s:HL('PmenuThumb', 'brightgravel')
-
-" }}}
-" Diffs {{{
-
-call s:HL('DiffDelete', 'coal', 'coal')
-call s:HL('DiffAdd',    '',     'deepergravel')
-call s:HL('DiffChange', '',     'darkgravel')
-call s:HL('DiffText',   'snow', 'deepergravel', 'bold')
 
 " }}}
 " Spelling {{{
 
 if has("spell")
-    call s:HL('SpellCap', 'dalespale', 'bg', 'undercurl,bold', 'dalespale')
-    call s:HL('SpellBad', '', 'bg', 'undercurl', 'dalespale')
+    call s:HL('SpellCap', 'dalespale', '', 'undercurl,bold', 'dalespale')
+    call s:HL('SpellBad', '', '', 'undercurl', 'dalespale')
     call s:HL('SpellLocal', '', '', 'undercurl', 'dalespale')
     call s:HL('SpellRare', '', '', 'undercurl', 'dalespale')
 endif
@@ -336,16 +359,16 @@ endif
     call s:HL('CtrlPNoEntries', 'snow', 'taffy', 'bold')
 
     " the matched pattern
-    call s:HL('CtrlPMatch', 'orange', 'bg', 'none')
+    call s:HL('CtrlPMatch', 'orange', '', 'none')
 
     " the line prefix '>' in the match window
-    call s:HL('CtrlPLinePre', 'deepgravel', 'bg', 'none')
+    call s:HL('CtrlPLinePre', 'deepgravel', '', 'none')
 
     " the prompt’s base
-    call s:HL('CtrlPPrtBase', 'deepgravel', 'bg', 'none')
+    call s:HL('CtrlPPrtBase', 'deepgravel', '', 'none')
 
     " the prompt’s text
-    call s:HL('CtrlPPrtText', 'plain', 'bg', 'none')
+    call s:HL('CtrlPPrtText', 'plain', '', 'none')
 
     " the prompt’s cursor when moving over the text
     call s:HL('CtrlPPrtCursor', 'coal', 'tardis', 'bold')
@@ -369,8 +392,8 @@ endif
 " }}}
 " EasyMotion {{{
 
-call s:HL('EasyMotionTarget', 'tardis',     'bg', 'bold')
-call s:HL('EasyMotionShade',  'deepgravel', 'bg')
+call s:HL('EasyMotionTarget', 'red',     '', 'bold')
+call s:HL('EasyMotionShade',  'deepgravel', '')
 
 " }}}
 " Interesting Words {{{
@@ -394,10 +417,10 @@ call s:HL('InterestingWord6', 'coal', 'taffy')
 " }}}
 " ShowMarks {{{
 
-call s:HL('ShowMarksHLl', 'tardis', 'blackgravel')
-call s:HL('ShowMarksHLu', 'tardis', 'blackgravel')
-call s:HL('ShowMarksHLo', 'tardis', 'blackgravel')
-call s:HL('ShowMarksHLm', 'tardis', 'blackgravel')
+call s:HL('ShowMarksHLl', 'magenta', bg_c)
+call s:HL('ShowMarksHLu', 'magenta', bg_c)
+call s:HL('ShowMarksHLo', 'variable2', bg_c)
+call s:HL('ShowMarksHLm', 'yellow', 'magenta')
 
 " }}}
 
@@ -450,13 +473,14 @@ call s:HL('cssClassName', 'orange', '', 'none')
 
 call s:HL('gitDiff', 'lightgravel', '',)
 
-call s:HL('diffRemoved', 'dress', '',)
-call s:HL('diffAdded', 'lime', '',)
-call s:HL('diffFile', 'coal', 'taffy', 'bold')
-call s:HL('diffNewFile', 'coal', 'taffy', 'bold')
+call s:HL('diffRemoved', 'magenta', '',)
+call s:HL('diffAdded', 'variable1', '',)
+call s:HL('diffFile', 'green2', '', 'bold')
+call s:HL('diffNewFile', 'green', '', 'bold')
 
-call s:HL('diffLine', 'coal', 'orange', 'bold')
+call s:HL('diffLine', 'coal', 'yellow2', '')
 call s:HL('diffSubname', 'orange', '', 'none')
+
 
 " }}}
 " Django Templates {{{
@@ -471,8 +495,8 @@ call s:HL('djangoVarBlock', 'orange', '')
 " HTML {{{
 
 " Punctuation
-call s:HL('htmlTag',    'darkroast', 'bg', 'none')
-call s:HL('htmlEndTag', 'darkroast', 'bg', 'none')
+call s:HL('htmlTag',    'darkroast', '', 'none')
+call s:HL('htmlEndTag', 'darkroast', '', 'none')
 
 " Tag names
 call s:HL('htmlTagName',        'coffee', '', 'bold')
@@ -485,9 +509,9 @@ call s:HL('htmlArg', 'coffee', '', 'none')
 " Stuff inside an <a> tag
 
 if g:badwolf_html_link_underline
-    call s:HL('htmlLink', 'lightgravel', '', 'underline')
+    call s:HL('htmlLink', 'strings2', '', 'underline')
 else
-    call s:HL('htmlLink', 'lightgravel', '', 'none')
+    call s:HL('htmlLink', 'strings2', '', 'none')
 endif
 
 " }}}
@@ -625,6 +649,12 @@ call s:HL('VimNotation', 'dress', '', 'none')
 call s:HL('VimBracket', 'dress', '', 'none')
 
 " }}}
+" Shell {{{
+"call s:HL('shVariable',   'variable1', '', 'none')
+"call s:HL('shDeref', 'variable2', '', 'none')
+"call s:HL('Delimiter', 'delimiter', '', 'none')
+"call s:HL('shTestOpr', 'flow1', '', 'none')
 
+" }}}
 " }}}
 
