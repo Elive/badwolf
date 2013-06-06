@@ -32,7 +32,7 @@ what you're in for.
 
 ### Bash
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/screenshots/raw/master/bash.png)
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/bash.png)
 
 ### C
 
