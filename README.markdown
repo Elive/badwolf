@@ -87,8 +87,8 @@ There are a few settings you can use to tweak how the colorscheme looks.
 user-defined background tone, from 1 to 6, higher = lighter,
 0 is for have a transparent background
 
-More Configurations from the original colorscheme code
-------------------------------------------------------
+Configurations from the original colorscheme
+--------------------------------------------
 
 ### g:badwolf\_darkgutter
 
