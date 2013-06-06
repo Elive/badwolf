@@ -203,8 +203,8 @@ if exists('g:badwolf_background')
         let bg_c = 'deepergravel'
     endif
 else
-    call s:HL('Normal', 'plain', 'darkergravel')
-    let bg_c = 'darkergravel'
+    call s:HL('Normal', 'plain', 'blackestgravel')
+    let bg_c = 'blackestgravel'
 endif
 
 "call s:HL('Normal', 'plain', 'coal')
