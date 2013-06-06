@@ -30,21 +30,46 @@ Screenshots
 These screenshots may be out of date, but they'll at least give you a taste of
 what you're in for.
 
+### Diff
+
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/diff.png)
+
+### Features Misc
+
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/features1.png)
+
 ### Bash
 
 ![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/bash.png)
 
 ### C
 
-![Screenshot](http://i.imgur.com/THHz7.png)
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/c.png)
+
+### CSS
+
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/css.png)
+
+### HTML
+
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/html.png)
+
+### JS
+
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/js.png)
+
+### MarkDown
+
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/markdown.png)
 
 ### PHP
 
-![Screenshot](http://i.imgur.com/J56VS.png)
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/php.png)
 
 ### VimL
 
-![Screenshot](http://i.imgur.com/J56VS.png)
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/viml.png)
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/viml2.png)
 
 
 
