@@ -37,6 +37,7 @@ what you're in for.
 ### Features Misc
 
 ![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/features1.png)
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/background-level.png)
 
 ### Bash
 
