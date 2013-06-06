@@ -1,17 +1,28 @@
-Bad Wolf
-========
+Vim colorscheme for Elive
+=========================
 
-A color scheme for Vim, pieced together by [Steve Losh](http://stevelosh.com/).
+Most of VIM colorschemes are designed for be beautiful or with a specific style in mind, this colorscheme instead is designed with a simple focus in mind: **USABILITY**, leaving the beautifulness in a second plane but always good for the eyes, so its goal is to be useful more than beautiful, with important things to consider like the psychology of the color used or the visual hilighting for call the attention to the user.
 
-There's still quite a lot of room for improvement (particularly in HTML) so feel
-free to send me ideas through the [issue tracker][] or pull requests.
+There's some features that includes
+
+* friendly for the eyes
+* Easy to identify what kind of element is each piece of code
+* psychology of colors (green = good, red = bad, yellow or magenta = alert, etc)
+* Low Contrast for less-important things like comments, visual selections, extra whitespaces in the end of the lines
+* High contrast for important things like:
+  * important notes like TODO/FIXME/XXX
+  * folded blocks
+  * hilighted search
+  * marks
+  * functions
+* configurable background darkness level
+
+It works in both gvim and 256-color terminals
+
+
+Note: This colorscheme is made from the original BadWolf's colorscheme, is not really a hack of it but a redesign of all the resulting look, I decided to use badwolf code because was very nice coded and well structured
 
 It's MIT/X11 licensed, so feel free to hack it apart if you like.
-
-**If you're going to send a pull request that you want me to merge, please post
-a comment in it with before/after screenshots!**
-
-[issue tracker]: http://github.com/sjl/badwolf/issues
 
 Screenshots
 -----------
@@ -19,26 +30,37 @@ Screenshots
 These screenshots may be out of date, but they'll at least give you a taste of
 what you're in for.
 
-### Python
+### Bash
 
-![Screenshot](http://i.imgur.com/fQGGC.png)
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/screenshots/raw/master/bash.png)
 
-### HTML (Django Templates)
-
-![Screenshot](http://i.imgur.com/LgLar.png)
-
-### Clojure
+### C
 
 ![Screenshot](http://i.imgur.com/THHz7.png)
 
-### Markdown
+### PHP
 
 ![Screenshot](http://i.imgur.com/J56VS.png)
+
+### VimL
+
+![Screenshot](http://i.imgur.com/J56VS.png)
+
+
+
 
 Configuration
 -------------
 
-There are a few settings you can use to tweak how Bad Wolf looks.
+There are a few settings you can use to tweak how the colorscheme looks.
+
+### g:badwolf\_background = 2
+
+user-defined background tone, from 1 to 6, higher = lighter,
+0 is for have a transparent background
+
+More Configurations from the original colorscheme code
+------------------------------------------------------
 
 ### g:badwolf\_darkgutter
 
