@@ -37,7 +37,6 @@ what you're in for.
 ### Features Misc
 
 ![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/features1.png)
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/background-level.png)
 
 ### Bash
 
@@ -72,6 +71,9 @@ what you're in for.
 ![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/viml.png)
 ![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/viml2.png)
 
+### Different Background level
+
+![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/background-level.png)
 
 
 
