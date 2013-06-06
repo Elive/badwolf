@@ -1,5 +1,5 @@
-Vim colorscheme for Elive
-=========================
+Vim colorscheme for Readability
+===============================
 
 Most of VIM colorschemes are designed for be beautiful or with a specific style in mind, this colorscheme instead is designed with a simple focus in mind: **USABILITY**, leaving the beautifulness in a second plane but always good for the eyes, so its goal is to be useful more than beautiful, with important things to consider like the psychology of the color used or the visual hilighting for call the attention to the user.
 
