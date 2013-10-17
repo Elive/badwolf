@@ -214,7 +214,6 @@ call s:HL('Folded', 'magenta', bg_c, 'none')
 
 call s:HL('VertSplit', 'lightgravel', '', 'none')
 
-set cursorline
 call s:HL('CursorLine',   '', '', 'bold')
 call s:HL('CursorColumn', '', 'darkgravel')
 call s:HL('ColorColumn',  '', 'darkgravel')
