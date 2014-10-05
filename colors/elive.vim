@@ -650,8 +650,13 @@ call s:HL('VimNotation', 'dress', '', 'none')
 call s:HL('VimBracket', 'dress', '', 'none')
 
 " }}}
+" Plugin: Signify {{{
+call s:HL('SignifySignAdd',   'green2', '', 'bold')
+call s:HL('SignifySignDelete',   'mediumgravel', '', 'bold')
+call s:HL('SignifySignChange',   'strings2', '', 'bold')
+
+" }}}
 " Shell {{{
-"call s:HL('shVariable',   'variable1', '', 'none')
 "call s:HL('shDeref', 'variable2', '', 'none')
 "call s:HL('Delimiter', 'delimiter', '', 'none')
 "call s:HL('shTestOpr', 'flow1', '', 'none')
