@@ -652,7 +652,7 @@ call s:HL('VimBracket', 'dress', '', 'none')
 " }}}
 " Plugin: Signify {{{
 call s:HL('SignifySignAdd',   'green2', '', 'bold')
-call s:HL('SignifySignDelete',   'mediumgravel', '', 'bold')
+call s:HL('SignifySignDelete',   'toffee', '', 'bold')
 call s:HL('SignifySignChange',   'strings2', '', 'bold')
 
 " }}}
