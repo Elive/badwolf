@@ -32,48 +32,48 @@ what you're in for.
 
 ### Diff
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/diff.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/diff.png)
 
 ### Features Misc
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/features1.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/features1.png)
 
 ### Bash
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/bash.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/bash.png)
 
 ### C
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/c.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/c.png)
 
 ### CSS
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/css.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/css.png)
 
 ### HTML
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/html.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/html.png)
 
 ### JS
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/js.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/js.png)
 
 ### MarkDown
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/markdown.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/markdown.png)
 
 ### PHP
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/php.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/php.png)
 
 ### VimL
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/viml.png)
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/viml2.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/viml.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/viml2.png)
 
 ### Different Background level
 
-![Screenshot](http://github.com/Elive/vim-colorscheme-elive/raw/master/screenshots/background-level.png)
+![Screenshot](http://raw.github.com/Elive/vim-colorscheme-elive/master/screenshots/background-level.png)
 
 
 
