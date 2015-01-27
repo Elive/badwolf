@@ -328,7 +328,7 @@ call s:HL('Exception', 'lime', '', 'bold')
 " Misc
 call s:HL('Error',  'red',   'blackgravel', 'bold')
 call s:HL('localWhitespaceError',  '',   'deepergravel', 'bold')
-call s:HL('ExtraWhitespace',  '',   'gravel', 'bold')
+call s:HL('ExtraWhitespace',  '',   'lightgravel', 'bold')
 call s:HL('Debug',  'snow',   '',      'bold')
 call s:HL('Ignore', 'gravel', '',      '')
 
