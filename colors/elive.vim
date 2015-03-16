@@ -2,6 +2,8 @@
 " configured for elive
 "
 " HEX codes conversion in: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
+" thanks to a nice plugin in vim you can directly see the hex commented colors
+" (thats why the comments)
 
 " Supporting code -------------------------------------------------------------
 " Preamble {{{
@@ -33,78 +35,78 @@ let s:bwc = {}
 
 " The most basic of all our colors is a slightly tweaked version of the Molokai
 " Normal text.
-let s:bwc.plain = ['f8f6f2', 15]
+let s:bwc.plain = ['f8f6f2', 15]  " #f8f6f2
 
 " Pure and simple.
-let s:bwc.snow = ['ffffff', 15]
-let s:bwc.coal = ['000000', 16]
+let s:bwc.snow = ['ffffff', 15]  " #ffffff
+let s:bwc.coal = ['000000', 16]  " #000000
 
 " All of the Gravel colors are based on a brown from Clouds Midnight.
-let s:bwc.brightgravel   = ['d9cec3', 252]
-let s:bwc.lightgravel    = ['998f84', 245]
-let s:bwc.gravel         = ['857f78', 243]
-let s:bwc.mediumgravel   = ['666462', 241]
-let s:bwc.deepgravel     = ['45413b', 238]
-let s:bwc.deepergravel   = ['35322d', 236]
-let s:bwc.darkgravel     = ['242321', 235]
-let s:bwc.darkergravel   = ['1c1c1c', 234]
-let s:bwc.blackgravel    = ['1c1b1a', 233]
-let s:bwc.blackestgravel = ['141413', 232]
+let s:bwc.brightgravel   = ['d9cec3', 252]  " #d9cec3
+let s:bwc.lightgravel    = ['998f84', 245]  " #998f84
+let s:bwc.gravel         = ['857f78', 243]  " #857f78
+let s:bwc.mediumgravel   = ['666462', 241]  " #666462
+let s:bwc.deepgravel     = ['45413b', 238]  " #45413b
+let s:bwc.deepergravel   = ['35322d', 236]  " #35322d
+let s:bwc.darkgravel     = ['242321', 235]  " #242321
+let s:bwc.darkergravel   = ['1c1c1c', 234]  " #1c1c1c
+let s:bwc.blackgravel    = ['1c1b1a', 233]  " #1c1b1a
+let s:bwc.blackestgravel = ['141413', 232]  " #141413
 
 " A color sampled from a highlight in a photo of a glass of Dale's Pale Ale on
 " my desk.
-let s:bwc.dalespale = ['fade3e', 221]
+let s:bwc.dalespale = ['fade3e', 221]  " #fade3e
 
 " A beautiful tan from Tomorrow Night.
-let s:bwc.dirtyblonde = ['f4cf86', 222]
+let s:bwc.dirtyblonde = ['f4cf86', 222]  " #f4cf86
 
 " Delicious, chewy red from Made of Code for the poppiest highlights.
-let s:bwc.taffy = ['d75f00', 208]
-let s:bwc.red = ['d70000', 160]
-let s:bwc.removed = ['af0000', 124]
-let s:bwc.added = ['00ff00', 46]
+let s:bwc.taffy = ['d75f00', 208]  " #d75f00
+let s:bwc.red = ['d70000', 160]  " #d70000
+let s:bwc.removed = ['af0000', 124]  " #af0000
+let s:bwc.added = ['00ff00', 46]  " #00ff00
 
 " Another chewy accent, but use sparingly!
-let s:bwc.saltwatertaffy = ['8cffba', 121]
+let s:bwc.saltwatertaffy = ['8cffba', 121]  " #8cffba
 
 " The star of the show comes straight from Made of Code.
-let s:bwc.tardis = ['949494', 246]
+let s:bwc.tardis = ['949494', 246]  " #949494
 
 " This one's from Mustang, not Florida!
-let s:bwc.orange = ['ffa724', 214]
+let s:bwc.orange = ['ffa724', 214]  " #ffa724
 
 " A limier green from Getafe.
-let s:bwc.lime = ['af5fff', 177]
-let s:bwc.green = ['5fd700', 76]
-let s:bwc.green2 = ['87af00', 106]
+let s:bwc.lime = ['af5fff', 177]  " #af5fff
+let s:bwc.green = ['5fd700', 76]  " #5fd700
+let s:bwc.green2 = ['87af00', 106]  " #87af00
 
 
 " Rose's dress in The Idiot's Lantern.
-let s:bwc.dress = ['ff9eb8', 211]
+let s:bwc.dress = ['ff9eb8', 211]  " #ff9eb8
 
 " Another play on the brown from Clouds Midnight.  I love that color.
-let s:bwc.toffee = ['b88853', 137]
+let s:bwc.toffee = ['b88853', 137]  " #b88853
 
 " Also based on that Clouds Midnight brown.
-let s:bwc.coffee    = ['c7915b', 173]
-let s:bwc.darkroast = ['88633f', 95]
+let s:bwc.coffee    = ['c7915b', 173]  " #c7915b
+let s:bwc.darkroast = ['88633f', 95]  " #88633f
 
 
 " Variables
-let s:bwc.variable1  = ['5fafff', 39]
-let s:bwc.variable2  = ['87d7ff', 117]
-let s:bwc.variable3  = ['00d7ff', 45]
+let s:bwc.variable1  = ['5fafff', 39]  " #5fafff
+let s:bwc.variable2  = ['87d7ff', 117]  " #87d7ff
+let s:bwc.variable3  = ['00d7ff', 45]  " #00d7ff
 
 " Misc
-let s:bwc.yellow  = ['ffff00', 226]
-let s:bwc.yellow2  = ['ffaf00', 214]
-let s:bwc.yellow3  = ['ffff87', 228]
-let s:bwc.strings  = ['8bc244', 148]
-"let s:bwc.strings2  = ['8787ff', 117]
-let s:bwc.strings2  = ['8787ff', 105]
-let s:bwc.delimiter  = ['ffafaf', 217]
-let s:bwc.flow1  = ['ff8700', 208]
-let s:bwc.magenta  = ['8700d7', 165]
+let s:bwc.yellow  = ['ffff00', 226]  " #ffff00
+let s:bwc.yellow2  = ['ffaf00', 214]  " #ffaf00
+let s:bwc.yellow3  = ['ffff87', 228]  " #ffff87
+let s:bwc.strings  = ['8bc244', 148]  " #8bc244
+"let s:bwc.strings2  = ['8787ff', 117]  " #8787ff
+let s:bwc.strings2  = ['8787ff', 105]  " #8787ff
+let s:bwc.delimiter  = ['ffafaf', 217]  " #ffafaf
+let s:bwc.flow1  = ['ff8700', 208]  " #ff8700
+let s:bwc.magenta  = ['8700d7', 165]  " #8700d7
 
 
 " }}}
