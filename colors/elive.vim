@@ -658,6 +658,8 @@ call s:HL('SignifySignAdd',   'green2', '', 'bold')
 call s:HL('SignifySignDelete',   'toffee', '', 'bold')
 call s:HL('SignifySignChange',   'strings2', '', 'bold')
 
+" Plugin: https://github.com/justinmk/vim-syntax-extra
+call s:HL('CUserFunction',   'strings2', '', 'bold')
 " }}}
 " Shell {{{
 "call s:HL('shDeref', 'variable2', '', 'none')
